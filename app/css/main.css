@@ -96,10 +96,32 @@ textarea {
    ========================================================================== */
 
 html{
-    background: rgb(33, 88, 107);
+    background: #36525b;
+}
+body{
+    background: #36525b;
+    padding: 50px;
 }
 
 
+
+
+h1.tk-fira-sans-2{
+  line-height: 37px;
+  font-size: 44px;
+  color: #2b98c4;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 5px 13px; 
+}
+.tk-share-techmono h1{
+  line-height: 37px;
+  font-size: 40px;
+  color: #ea7c33;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 5px 13px; 
+}
 
 
 
