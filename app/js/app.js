@@ -13,8 +13,12 @@ mcgrawApp.config(['$routeProvider',
       when('/', {
         templateUrl: '/app/partials/home.html',
         controller: 'HomeController'
-      })
-      .otherwise({
+      }).
+      when('/project1', {
+        templateUrl: '/app/partials/project1.html',
+        controller: 'Project1Controller'
+      }).
+      otherwise({
         redirectTo: '/'
       });
   }]);
