@@ -10,6 +10,11 @@ mcgrawAppControllers.controller('HomeController', ['$scope',
     $scope.title = "mcgraw.codes";
   }]);
 
+mcgrawAppControllers.controller('Project1Controller', ['$scope',
+  function ($scope) {
+    $scope.title = "mcgraw.codes/project1";
+  }]);
+
 
 
 
