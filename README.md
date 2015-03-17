@@ -1,6 +1,6 @@
 # mcgraw.codes
-*angularJS*
-**ng-route**
-*bootstrap*
-*jQuery*
+* angularJS
+*  ng-route
+* bootstrap
+* jQuery
 
