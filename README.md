@@ -1,7 +1,7 @@
 # mcgraw.codes
-> my project portfolio, ive began listing out the dependencies below - the sublist details the angular moudules that im using 
+> project portfolio - dependencies below - angular module dependencies in sublist
 * angularJS
   * ng-route
 * bootstrap
-* jQuery
+
 
