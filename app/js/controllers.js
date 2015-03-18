@@ -13,7 +13,28 @@ mcgrawAppControllers.controller('HomeController', ['$scope',
 mcgrawAppControllers.controller('Project1Controller', ['$scope',
   function ($scope) {
     $scope.title = "mcgraw.codes/project1";
+    $scope.perc = 73;
+    $scope.projectedperc = 88;
+    $scope.faces = [];
   }]);
+
+mcgrawAppControllers.controller('Project2Controller', ['$scope',
+  function ($scope) {
+    $scope.title = "mcgraw.codes/project1";
+    $scope.perc = 73;
+    $scope.projectedperc = 88;
+    $scope.faces = [];
+  }]);
+
+mcgrawAppControllers.controller('Project3Controller', ['$scope',
+  function ($scope) {
+    $scope.title = "mcgraw.codes/project2";
+    $scope.perc = 73;
+    $scope.projectedperc = 88;
+    $scope.faces = [];
+  }]);
+
+
 
 
 
