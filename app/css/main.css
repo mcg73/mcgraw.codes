@@ -128,10 +128,10 @@ h1.tk-fira-sans-2{
 h1.tk-share-techmono {
   line-height: 37px;
   font-size: 40px;
-  color: #ea7c33;
+  color: #e8a220;
   font-weight: 700;
-  text-align: left;
-  margin: 0 0 5px 13px; 
+  text-align: center;
+  margin: 180px 0 0 0; 
   text-shadow: 1px 1px 1px rgba(188, 84, 84, 0.6);
 }
 h1.tk-share-techmono span{
@@ -166,8 +166,8 @@ canvas[happy-circle]{
 .faceHold{
   width: 250px;
   height: 250px;
-  margin: 19% auto;
-  opacity: .8;
+  margin: 9px auto;
+  opacity: .6;
 }
 #faceHold img{
 
