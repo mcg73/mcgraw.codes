@@ -132,17 +132,46 @@ h1.tk-share-techmono {
   font-weight: 700;
   text-align: left;
   margin: 0 0 5px 13px; 
+  text-shadow: 1px 1px 1px rgba(188, 84, 84, 0.6);
+}
+h1.tk-share-techmono span{
+  text-decoration: line-through;
+  color: red;
+}
+.proj1-class > h1.tk-share-techmono{
+  color: #38a4bc;
+  font-size: 35px;
 }
 a:hover{
   text-decoration: none;
 }
+canvas[happy-circle]{
+  transform: rotate(-90deg);
+}
+
+.currentPerc{
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.projectedPerc{
+  display: block;
+  position: relative;
+  z-index: 1;
+  top: -120px;
+}
 
 
 
+.faceHold{
+  width: 250px;
+  height: 250px;
+  margin: 19% auto;
+  opacity: .8;
+}
+#faceHold img{
 
-
-
-
+}
 
 
 
