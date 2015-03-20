@@ -1,11 +1,9 @@
 /*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
-
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -14,8 +12,9 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -28,12 +27,10 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 /*
  * A better looking default horizontal rule
  */
@@ -46,22 +43,15 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
 }
-
 /*
  * Remove default fieldset styles.
  */
@@ -71,7 +61,6 @@ fieldset {
     margin: 0;
     padding: 0;
 }
-
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -79,7 +68,6 @@ fieldset {
 textarea {
     resize: vertical;
 }
-
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -90,95 +78,131 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-html{
-    background: #36525b;
+html {
+    background: #476168;
+    max-width: 100%;
 }
-body{
-    background: #36525b;
-    padding: 50px;
+body {
+    background: #476168;
+    padding: 50px 0px;
+    max-width: 100%;
 }
-
-
-
-
-h1.tk-fira-sans-2{
-  line-height: 37px;
-  font-size: 44px;
-  color: #2b98c4;
-  font-weight: 700;
-  text-align: left;
-  margin: 0 0 5px 13px; 
+.fade {
+    opacity: .6;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.fade.fa {
+  opacity: .4;
+  color: #222;
+  transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -webkit-transition: color .25s ease-in-out;
+}
+.fade:hover {
+    opacity: 0.2;
+    cursor: pointer;
+    color: #f7a0ed;
+}
+h1.tk-fira-sans-2 {
+    line-height: 37px;
+    font-size: 44px;
+    color: #2b98c4;
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 5px 13px;
 }
 h1.tk-share-techmono {
-  line-height: 37px;
-  font-size: 40px;
-  color: #e8a220;
-  font-weight: 700;
+    line-height: 37px;
+    font-size: 40px;
+    color: rgb(34, 34, 34);
+    font-weight: 700;
+    text-align: center;
+    margin-top: 124px;
+    margin-left: 25%;
+    position: absolute;
+}
+h1.tk-jaf-domus-titling-web-bold {
+    font-weight: bold;
+    color: rgb(114, 222, 226);
+    opacity: 0.5;
+}
+h4.tk-jaf-domus-titling-web {
+    font-wieght: light;
+    color: rgb(34, 22, 27);
+    opacity: 0.5;
+    color: #f7a0ed;
+    margin-top: -21px;
+
+}
+.tk-jaf-domus-titling-web span {
+    font-weight: light;
+    color: whitesmoke;
+    opacity: 0.7;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+}
+.proj1-class > h1.tk-share-techmono {
+    color: #38a4bc;
+    font-size: 35px;
+}
+a:hover {
+    text-decoration: none;
+}
+#canvas-hold {
+    position: absolute;
+    top: -154px;
+    right: -50%;
+    z-index: 0;
+}
+#hold-up {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+}
+.faceHold {
+    width: 500px;
+}
+.faceHold img {
+    margin: 0 auto;
+    max-width: 100px;
+}
+.faceHold img:hover {
+    opacity: 0.2;
+}
+#bubble-dot {
+    width: 50px;
+    height: 50px;
+    background: #476168;
+    top: 100px;
+    left: 50%;
+    position: absolute;
+    z-index: 0;
+}
+#text-hold {}
+
+.hold-up-social{
+  display: inline-block;
   text-align: center;
-  margin: 180px 0 0 0; 
-  text-shadow: 1px 1px 1px rgba(188, 84, 84, 0.6);
+  width: 500px;
+  
+  padding-top: 20px;
 }
-h1.tk-share-techmono span{
-  text-decoration: line-through;
-  color: red;
+.hold-up-social > i{
+  margin: 0 10px;
+  color: #325159;
 }
-.proj1-class > h1.tk-share-techmono{
-  color: #38a4bc;
-  font-size: 35px;
-}
-a:hover{
-  text-decoration: none;
-}
-canvas[happy-circle]{
-  transform: rotate(-90deg);
-}
-
-.currentPerc{
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-.projectedPerc{
-  display: block;
-  position: relative;
-  z-index: 1;
-  top: -120px;
-}
-
-
-
-.faceHold{
-  width: 250px;
-  height: 250px;
-  margin: 9px auto;
-  opacity: .6;
-}
-#faceHold img{
-
-}
-
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers:
  * http://juicystudio.com/article/screen-readers-display-none.php
@@ -188,7 +212,6 @@ canvas[happy-circle]{
     display: none !important;
     visibility: hidden;
 }
-
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -204,15 +227,13 @@ canvas[happy-circle]{
     position: absolute;
     width: 1px;
 }
-
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -220,7 +241,6 @@ canvas[happy-circle]{
     position: static;
     width: auto;
 }
-
 /*
  * Hide visually and from screen readers, but maintain layout
  */
@@ -228,7 +248,6 @@ canvas[happy-circle]{
 .invisible {
     visibility: hidden;
 }
-
 /*
  * Clearfix: contain floats
  *
@@ -241,16 +260,16 @@ canvas[happy-circle]{
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    
+    display: table;
+    /* 2 */
 }
-
 .clearfix:after {
     clear: both;
 }
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -260,14 +279,9 @@ canvas[happy-circle]{
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -275,72 +289,55 @@ canvas[happy-circle]{
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
+        
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
-
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
+    
     thead {
         display: table-header-group;
     }
-
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
