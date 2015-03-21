@@ -69,6 +69,23 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
             canvas.width = 1000;//window.innerWidth;
             canvas.height = 500;//window.innerHeight;
 
+            //pick one of two colors 
+
+            var color;
+            var getColor = function(){
+              var colorVal = Math.floor((Math.random() * 6) + 1); 
+              
+              if(colorVal === 1 ){
+                color = 'rgba(114, 222, 226, 0.5)';
+              } 
+              else if(colorVal === 2 || colorVal === 3 || colorVal === 4){
+                color = 'rgba(247, 160, 237, 0.5)';
+              } 
+              else color === "whitesmoke";
+
+              return color;
+            }
+
             var settings = {
 
                 'basic': {
@@ -79,10 +96,10 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
                     'min_angle': 0,
                     'angle_range': 360,
                     'min_speed': 1,
-                    'speed_range': 45,
-                    'min_size': .3,
-                    'size_range': 3,
-                    'colour': 'rgba(114, 222, 226, 0.7)' //#E81A2Drgb(114, 222, 226)
+                    'speed_range': 25,
+                    'min_size': .2,
+                    'size_range': 5,
+                    'colour': color //#E81A2Drgb(114, 222, 226)
                 }
             };
             //  ********  PARTICLE *********
@@ -156,7 +173,8 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
                     }
                     particle.pos.x += particle.vel.x * dt;
                     particle.pos.y += particle.vel.y * dt;
-                    ctx.fillStyle = this.settings.colour;
+                    //ctx.fillStyle = this.settings.colour;
+                    ctx.fillStyle = getColor();
                     var x = this.pos.x + particle.pos.x;
                     var y = this.pos.y + particle.pos.y;
                     ctx.beginPath();
