@@ -7,7 +7,7 @@
             <div happy-bubbles></div>
         </div>
         <div class="faceHold">
-            <a href="" ng-click="stopBubbles()"> <img src="/app/img/mcgraw-character-black-1.png" class="img-responsive fade" width="150" height="150" alt="mcgraw image" /> </a>
+            <a href="" ng-mouseover="project1 = true" ng-mouseleave="project1 = false"> <img src="/app/img/mcgraw-character-black-1.png" class="img-responsive fade" width="150" height="150" alt="mcgraw image" /> </a>
         </div>
         <div class="hold-up-social">
             <a href="https://github.com/mcg73/mcgraw.codes"><i class="fa fa-github-alt fa-2x fade" ng-mouseover="github = true" ng-mouseleave="github = false"></i></a>
@@ -18,6 +18,7 @@
                 <span ng-show="github">mcgraw.codes source files</span>
                 <span ng-show="rebel">alert the alliance</span>
                 <span ng-show="codepen">codepen stash</span>
+                <span ng-show="project1">next project</span>
             </div>
         </div>
     </div>
