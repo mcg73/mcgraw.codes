@@ -83,11 +83,11 @@ textarea {
    ========================================================================== */
 
 html {
-    background: rgb(35, 58, 63);
+    background: rgb(35, 58, 63); //dark blue 
     max-width: 100%;
 }
 body {
-    background: rgb(35, 58, 63);
+    background: rgb(35, 58, 63); //dark blue
     padding: 50px 0px;
     max-width: 100%;
 }
