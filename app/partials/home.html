@@ -7,19 +7,18 @@
             <div happy-bubbles></div>
         </div>
         <div class="faceHold">
-            <a href="#/project2">
-                <img src="/app/img/mcgraw-character-black-1.png" class="img-responsive fade" width="150" height="150" alt="mcgraw red blue face image" />
-            </a>
+            <a href="" ng-click="stopBubbles()"> <img src="/app/img/mcgraw-character-black-1.png" class="img-responsive fade" width="150" height="150" alt="mcgraw image" /> </a>
         </div>
         <div class="hold-up-social">
-            <i class="fa fa-github-alt fa-2x fade" ng-show="github"></i>
-            <i class="fa fa-rebel fa-2x fade" ng-show="rebel"></i>
-            <i class="fa fa-codepen fa-2x fade" ng-show="codepen"></i>
-        </div>
-        <div class="social-text">
-          <span>github source files</span>
-          <span>email <span class="strikeit">the alliance</span>me</span>
-          <span>codepen stash</span>
+            <a href="https://github.com/mcg73/mcgraw.codes"><i class="fa fa-github-alt fa-2x fade" ng-mouseover="github = true" ng-mouseleave="github = false"></i></a>
+            <i class="fa fa-rebel fa-2x fade" ng-mouseover="rebel = true" ng-mouseleave="rebel = false"></i>
+            <a href="http://codepen.io/mcgraw/"><i class="fa fa-codepen fa-2x fade" ng-mouseover="codepen = true" ng-mouseleave="codepen = false"></i></a>
+            <div class="social-text tk-jaf-domus-titling-web">
+                <br>
+                <span ng-show="github">mcgraw.codes source files</span>
+                <span ng-show="rebel">alert the alliance</span>
+                <span ng-show="codepen">codepen stash</span>
+            </div>
         </div>
     </div>
 </div>

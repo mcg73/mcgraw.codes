@@ -83,23 +83,26 @@ textarea {
    ========================================================================== */
 
 html {
-    background: rgb(41, 64, 69);
+    background: rgb(52, 54, 55);
     max-width: 100%;
 }
 body {
-    background: rgb(41, 64, 69);
+    background: rgb(52, 54, 55);
     padding: 50px 0px;
     max-width: 100%;
 }
+a{
+  text-decoration: none;
+}
 .fade {
-    opacity: .6;
-    transition: opacity .25s ease-in-out;
+    opacity: .7;
+    transition: all .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
 .fade.fa {
-  opacity: .4;
-  color: #222;
+  opacity: .3;
+  color: #f7a0ed;
   transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
   -webkit-transition: color .25s ease-in-out;
@@ -107,7 +110,11 @@ body {
 .fade:hover {
     opacity: 0.2;
     cursor: pointer;
-    color: #f7a0ed;
+    color: rgb(114, 222, 226);
+}
+.strikeit{
+  text-decoration: line-through;
+  color: #d83a3a;
 }
 h1.tk-fira-sans-2 {
     line-height: 37px;
@@ -138,7 +145,11 @@ h4.tk-jaf-domus-titling-web {
     opacity: 0.5;
     color: #f7a0ed;
     margin-top: -21px;
-
+}
+span.tk-jaf-domus-titling-web{
+  color: rgb(114, 222, 226);
+  font-wieght: light;
+  opacity: 0.5;
 }
 .tk-jaf-domus-titling-web span {
     font-weight: light;

@@ -47,7 +47,7 @@ mcgrawAppDirectives.directive('happyCircle', ['$timeout', function(timer) {
 
 }]);
 
-mcgrawAppDirectives.directive('happyBubbles', function() {
+mcgrawAppDirectives.directive('happyBubbles', [function() {
     return {
         restrict: 'A',
         template: '<canvas id="c"></canvas>',
@@ -75,30 +75,39 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
             var getColor = function(){
               var colorVal = Math.floor((Math.random() * 6) + 1); 
               
-              if(colorVal === 1 ){
-                color = 'rgba(114, 222, 226, 0.5)';
+              if(colorVal === 1 || colorVal === 5 ){
+                color = 'rgba(114, 222, 226, 0.4)';
               } 
               else if(colorVal === 2 || colorVal === 3 || colorVal === 4){
                 color = 'rgba(247, 160, 237, 0.5)';
               } 
-              else color === "whitesmoke";
+              else color = "rgba(230, 239, 242, 0.1)";
 
               return color;
+            }
+
+            var emmis_rate = 3;
+            //set emission rate to zero on click
+            scope.stopBubbles = function(){
+              console.log("before: " + emmis_rate);
+              emmis_rate = 0;
+              console.log("after: " + emmis_rate);
+              return emmis_rate;
             }
 
             var settings = {
 
                 'basic': {
 
-                    'emission_rate': 5,
-                    'min_life': 1,
-                    'life_range': 7,
-                    'min_angle': 0,
+                    'emission_rate': emmis_rate,
+                    'min_life': 3,
+                    'life_range': 10,
+                    'min_angle': 90,
                     'angle_range': 360,
-                    'min_speed': 1,
+                    'min_speed': 5,
                     'speed_range': 25,
                     'min_size': .2,
-                    'size_range': 5,
+                    'size_range': 4,
                     'colour': color //#E81A2Drgb(114, 222, 226)
                 }
             };
@@ -132,6 +141,8 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
                 this.particles = [];
             };
 
+
+
             Emitter.prototype.update = function() {
                 if (!this.last_update) {
                     this.last_update = Date.now();
@@ -160,6 +171,7 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
 
                 dt /= 1000;
                 var i = this.particles.length;
+                
                 while (i--) {
                     var particle = this.particles[i];
                     if (particle.dead) {
@@ -171,10 +183,17 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
                         particle.dead = true;
                         continue;
                     }
+                    if(ctx.fillStyle === "rgba(114, 222, 226, 0.4)"){
+                      ctx.fillStyle = "rgba(247, 160, 237, 0.5)";
+                    }
+                    if(ctx.fillStyle === "rgba(247, 160, 237, 0.5)"){
+                      ctx.fillStyle = "rgba(114, 222, 226, 0.4)";
+                    }
                     particle.pos.x += particle.vel.x * dt;
                     particle.pos.y += particle.vel.y * dt;
-                    //ctx.fillStyle = this.settings.colour;
-                    ctx.fillStyle = getColor();
+                    //ctx.fillStyle = bubColor;
+                    //ctx.fillStyle = getColor();
+                    ctx.fillStyle = "rgba(114, 222, 226, 0.3)"
                     var x = this.pos.x + particle.pos.x;
                     var y = this.pos.y + particle.pos.y;
                     ctx.beginPath();
@@ -192,4 +211,4 @@ mcgrawAppDirectives.directive('happyBubbles', function() {
             loop();
         }
     }
-});
+}]);
