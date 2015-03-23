@@ -1,16 +1,29 @@
 <!-- home partial -->
 <div ng-controller="Project1Controller">
-    <h1 class="tk-share-techmono">  </h1>
-    <!-- <img src="" ng-show="" ng-repeat="face in faces" /> -->
-    <h1 class="tk-share-techmono">mcgraw.codes</h1>
-    <div class="faceHold">
-        <a href="#/project2">
-            <img src="/app/img/mcgraw-character-open-red.png" class="img-responsive" width="250" height="250" alt="mcgraw red face image" />
-        </a>
+    <div id="hold-up">
+        <h1 class="tk-jaf-domus-titling-web tk-jaf-domus-titling-web-bold text-center">mcgraw.codes</i></h1>
+        <h4 class="tk-jaf-domus-titling-web text-center">ui developer/novice computer artist</h4>
+        <div id="canvas-hold">
+            <div happy-bubbles></div>
+        </div>
+        <div class="faceHold">
+            <a href="" ng-click="stopBubbles()"> <img src="/app/img/mcgraw-character-black-1.png" class="img-responsive fade" width="150" height="150" alt="mcgraw image" /> </a>
+        </div>
+        <div class="hold-up-social">
+            <a href="https://github.com/mcg73/mcgraw.codes"><i class="fa fa-github-alt fa-2x fade" ng-mouseover="github = true" ng-mouseleave="github = false"></i></a>
+            <i class="fa fa-rebel fa-2x fade" ng-mouseover="rebel = true" ng-mouseleave="rebel = false"></i>
+            <a href="http://codepen.io/mcgraw/"><i class="fa fa-codepen fa-2x fade" ng-mouseover="codepen = true" ng-mouseleave="codepen = false"></i></a>
+            <div class="social-text tk-jaf-domus-titling-web">
+                <br>
+                <span ng-show="github">mcgraw.codes source files</span>
+                <span ng-show="rebel">alert the alliance</span>
+                <span ng-show="codepen">codepen stash</span>
+            </div>
+        </div>
     </div>
-
 </div>
-    <!-- <br><br><br>
+<!-- <br><br><br>
+    <i class="fa fa-cog fa-3x fa-spin">
 <h1 class="tk-share-techmono"> <span>bastard circle</span>&nbsp;happy circle </h1>
 <canvas width="120" height="120" class="currentPerc" happy-circle percentage="{{perc}}"></canvas>
 <canvas width="120" height="120" class="projectedPerc" happy-circle percentage="{{projectedperc}}"></canvas> -->
